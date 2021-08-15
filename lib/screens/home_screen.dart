@@ -75,20 +75,37 @@ class _HomeScreenState extends State<HomeScreen> {
           SizedBox(
             height: 20,
           ),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              padding: EdgeInsets.fromLTRB(50, 10, 50, 10),
-            ),
-            onPressed: questionsFun,
-            child: Text(
-              answersList['answer1'][answersIndex = 0],
-              style: TextStyle(
-                fontSize: 18,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.fromLTRB(50, 10, 50, 10),
+                ),
+                onPressed: questionsFun,
+                child: Text(
+                  answersList['answer1'][answersIndex],
+                  style: TextStyle(
+                    fontSize: 18,
+                  ),
+                ),
               ),
-            ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.fromLTRB(50, 10, 50, 10),
+                ),
+                onPressed: questionsFun,
+                child: Text(
+                  answersList['answer1'][answersIndex],
+                  style: TextStyle(
+                    fontSize: 18,
+                  ),
+                ),
+              ),
+            ],
           ),
           SizedBox(
-            height: 15,
+            height: 20,
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
@@ -96,22 +113,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             onPressed: questionsFun,
             child: Text(
-              answersList['answer1'][answersIndex = 1],
-              style: TextStyle(
-                fontSize: 18,
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 15,
-          ),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              padding: EdgeInsets.fromLTRB(50, 10, 50, 10),
-            ),
-            onPressed: questionsFun,
-            child: Text(
-              answersList['answer1'][answersIndex = 2],
+              answersList['answer1'][answersIndex],
               style: TextStyle(
                 fontSize: 18,
               ),
