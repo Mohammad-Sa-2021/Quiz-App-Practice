@@ -21,13 +21,13 @@ class _HomeScreenState extends State<HomeScreen> {
 
   int questionsIndex = 0;
   int answersIndex = 0;
-  int score = 0;
+  int points = 0;
 
   void questionsFun() {
     setState(() {
       questionsIndex++;
       answersIndex++;
-      if (questionsIndex >= 3) {
+      if (questionsIndex >= questionsList.length) {
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => ResultScreen()),
@@ -38,6 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void resetquiz() {
     questionsIndex = 0;
+    answersIndex = 0;
   }
 
   @override
@@ -58,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             padding: EdgeInsets.symmetric(horizontal: 20),
             margin: EdgeInsets.symmetric(horizontal: 20),
-            height: 150,
+            height: 160,
             child: Align(
               alignment: Alignment.center,
               child: Text(
@@ -80,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.fromLTRB(50, 10, 50, 10),
+                  padding: EdgeInsets.fromLTRB(60, 10, 60, 10),
                 ),
                 onPressed: questionsFun,
                 child: Text(
@@ -92,7 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.fromLTRB(50, 10, 50, 10),
+                  padding: EdgeInsets.fromLTRB(60, 10, 60, 10),
                 ),
                 onPressed: questionsFun,
                 child: Text(
@@ -109,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              padding: EdgeInsets.fromLTRB(50, 10, 50, 10),
+              padding: EdgeInsets.fromLTRB(60, 10, 60, 10),
             ),
             onPressed: questionsFun,
             child: Text(

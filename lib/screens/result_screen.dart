@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
 class ResultScreen extends StatelessWidget {
+  int points = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Result'),
+        leading: Icon(null),
         actions: [
           IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
+            onPressed: () {},
             icon: Icon(Icons.replay),
           ),
         ],
@@ -29,7 +30,7 @@ class ResultScreen extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                'Your Scored ',
+                'Your Got ',
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
@@ -39,7 +40,7 @@ class ResultScreen extends StatelessWidget {
                 height: 20,
               ),
               Text(
-                '20 Points',
+                '$points Points',
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
